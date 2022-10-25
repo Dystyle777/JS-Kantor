@@ -1,4 +1,5 @@
 "use strict"
+// проверка возможных резултатов функции "pow"
 describe("pow", function () {
    function makeTest(x) {
         let expected = x * x * x;
