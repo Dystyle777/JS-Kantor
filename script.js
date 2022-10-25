@@ -1,5 +1,5 @@
 "use strict"
-
+// описание функции "pow"
 function pow(x, n) {
     let result = 1;
 
