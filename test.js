@@ -1,6 +1,10 @@
 "use strict"
 // проверка возможных резултатов функции "pow"
 describe("pow", function () {
+    // раскомментировать для вывода сообщений
+    //  before(() => alert('Тестирование началось – перед тестами'));
+    // after(() => alert("Тестирование закончилось – после всех тестов"));
+   
     describe("возводит x в степень 2", function () {
         function makeTest(x) {
             let expected = x * x;
@@ -8,7 +12,7 @@ describe("pow", function () {
                 assert.equal(pow(x, 2), expected);
             });
         }
-        for (let x = 1; x <= 5; x++) {
+        for (let x = 1; x <= 2; x++) {
             makeTest(x);
             console.log(x);
         }
@@ -20,9 +24,17 @@ describe("pow", function () {
                 assert.equal(pow(x, 3), expected);
             });
         }
-        for (let x = 1; x <= 5; x++) {
+        for (let x = 1; x <= 2; x++) {
             makeTest(x);
             console.log(x);
         }
     });
+
+    it("если n - отрицательное число, результат будет NaN", function() {
+        assert.isNaN(pow(2, -1));
+      });
+    
+      it("если n не число, результат будет NaN", function() {
+        assert.isNaN(pow(2, 1.5));
+      });
 });

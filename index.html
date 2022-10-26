@@ -2,7 +2,10 @@
 <html>
   <head>
     <!-- добавим стили mocha для отображения результатов -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
 
     <!-- добавляем сам фреймворк mocha -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
@@ -20,23 +23,26 @@
   <body>
     <script>
       function pow(x, n) {
-        /* Здесь будет реализация функции, пока пусто */
-       let result = 1;
+        if (n < 0) return NaN;
+        if (Math.round(n) != n) return NaN;
 
-       for (let i = 0; i < n; i++) {
-        result *= x;
-       }
-       return result;
+        let result = 1;
+
+        for (let i = 0; i < n; i++) {
+          result *= x;
+        }
+        
+        return result;
       }
 
-      console.log(pow(2,3));
+      console.log(pow(2, 3));
     </script>
     <!-- скрипт со спецификацией (describe, it. . . ) -->
     <script src="test.js"></script>
     <!-- элемент с id="mocha" будет содержать результаты тестов -->
     <div id="mocha"></div>
     <!-- запускаем тесты! -->
-    
+
     <script>
       mocha.run();
     </script>
