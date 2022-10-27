@@ -70,16 +70,67 @@
 // alert ('asdadad' in user);
 
 // -=-=-=-=- Цикл «for…in»
-let obj = {
+// let obj = {
+//     name: 'Max',
+//     age: 30,
+//     'is admin': true,
+// }
+
+// for (let prop in obj) {
+//     console.log( prop );
+// }
+
+// for (let prop in obj) {
+//     console.log( obj[prop] );
+// }
+
+// упорядочивание свойств объектов
+// alert( String(Math.trunc(Number("++49")))); 
+// alert( String(Math.trunc(Number("1ю2")))); 
+// alert( String(Math.trunc(Number("1.2")))); 
+// alert( String(Math.trunc(Number("1,3")))); 
+
+
+// -==--=-=-=- практика к главе
+// #1 Напишите код, выполнив задание из каждого пункта отдельной строкой:
+// 1. Создайте пустой объект user .
+// 2. Добавьте свойство name со значением John .
+// 3. Добавьте свойство surname со значением Smith .
+// 4. Измените значение свойства name на Pete .
+// 5. Удалите свойство name из объекта.
+
+// let user = {};
+// user.name = 'John';
+// user.surname = 'Smith';
+// user.name = 'Pete';
+// delete user.name;
+// console.log(user);
+
+// #2 Проверка на пустоту
+// важность: 5
+// Напишите функцию isEmpty( obj ) , которая возвращает true , если у объекта нет
+// свойств, иначе false .
+// Должно работать так:
+// let schedule = {};
+// alert( isEmpty(schedule) ); // true
+// schedule["8: 30"] = "get up";
+// alert( isEmpty(schedule) ); // false
+
+function isEmpty(obj) {
+    for ( let prop in obj) {
+        // если тело цикла начнет выполняться - значит в объекте есть свойства
+        return false;
+    }
+    return true;
+}
+
+let shedule = {
     name: 'Max',
+    'get up': '8:30',
     age: 30,
-    'is admin': true,
 }
 
-for (let prop in obj) {
-    console.log( prop );
-}
-
-for (let prop in obj) {
-    console.log( obj[prop] );
-}
+// если объект:
+//              пуст - true
+//              заполнен - false
+console.log( isEmpty( shedule ));
