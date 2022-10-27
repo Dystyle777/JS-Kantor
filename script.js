@@ -70,3 +70,16 @@
 // alert ('asdadad' in user);
 
 // -=-=-=-=- Цикл «for…in»
+let obj = {
+    name: 'Max',
+    age: 30,
+    'is admin': true,
+}
+
+for (let prop in obj) {
+    console.log( prop );
+}
+
+for (let prop in obj) {
+    console.log( obj[prop] );
+}
