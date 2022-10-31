@@ -6,8 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="/script.js"></script>
+  <script src="/lodash.js"></script>
 </head>
 <body>
   <h3>hi</h3>
+  <script>
+    var objects = [{ 'a': 1 }, { 'b': 2 }];
+ 
+ var deep = _.cloneDeep(objects);
+ console.log(deep[0] === objects[0]);
+ // => false
+  </script>
 </body>
 </html>
