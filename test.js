@@ -1,2 +1,2 @@
 "use strict"
-//7_chain
+//8_symbol
